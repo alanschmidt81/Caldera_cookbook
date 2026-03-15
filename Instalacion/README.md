@@ -41,6 +41,10 @@ Por último, copiar el template de configuración de haproxy al directorio conf
 
 `cp templates/haproxy.conf ./conf`
 
+Por último, deberá activarse el plugin SSL desde la interfaz de Caldera antes del primer inicio seguro. Para ésto, editaremos el archivo configuración, buscaremos el tag "plugins" y agregaremos el plugin "ssl". Al finalizar, la sección correspondiente del archivo deberá quedar de la siguiente manera:
+
+[Caldera - Plugins](../../img/caldera2.png)
+
 
 
 
