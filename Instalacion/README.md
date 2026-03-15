@@ -47,6 +47,10 @@ Si todo anduvo según lo esperado, accediendo a http://192.168.1.54:8443, deber�
 
 ![Caldera - Login](../img/caldera3.png)
 
+Se sugiere colocar contraseñas adecuadas en el mismo archivo de configuración, sección users. A efectos de este lab, simplemente usaremos los usuarios por defecto blue y red, con contraseña "password"
+
+![Caldera - Login2](../img/caldera4.png)
+
 
 
 
