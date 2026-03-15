@@ -22,7 +22,8 @@ Para corroborar la correcta instalación, ejecutar el comando caldera, con el pa
 
 ![Instalación Caldera](../../img/caldera1.png)
 
-Existen requerimientos adicionales si se desea usar SSL/TLS para securizar las comunicaciones, en particular, se requiere una instalación de haproxy:
+Existen requerimientos adicionales si se desea usar SSL/TLS para securizar las comunicaciones, en particular, se requiere una instalación de haproxy.
+NOTA: El plugin SSL usa HAProxy como proxy inverso: recibe trafico HTTPS en el puerto 8443 y lo redirige internamente al puerto 8888 de CALDERA.
 
 ## Setup SSL/TLS
 
@@ -35,7 +36,11 @@ Nota: A efectos del laboratorio, el certificado será autofirmado. Esto no es re
 
 `sudo openssl req -x509 -newkey rsa:4096 -out conf/certificate.pem -keyout conf/certificate.pem -nodes`
 
-OpenSSL pedirá una serie de datos. No son importantes para el entorno de laboratorio, incluso varios de ellos pueden ser dejados en blanco. El certificado quedará contenido en el directorio /usr/share/caldera/plugins/ssl/certificate.pem
+OpenSSL pedirá una serie de datos. No son importantes para el entorno de laboratorio, incluso varios de ellos pueden ser dejados en blanco. El certificado quedará contenido en el directorio /usr/share/caldera/plugins/ssl/certificate.pem.
+Por último, copiar el template de configuración de haproxy al directorio conf
+
+`cp templates/haproxy.conf ./conf`
+
 
 
 
