@@ -1,1 +1,50 @@
+# Preliminares
 
+El laboratorio estará basado en un Caldera desplegado sobre un servidor KaliLinux virtual.
+En una primera instancia, se recomienda actualizar la plataforma hasta su última versión. Para esto:
+
+`# sudo apt update && sudo apt upgrade -y`
+
+Reiniciar el sistema operativo si se requiere.
+
+Notas:
+* Evaluar proposición de upgrade previo a aceptarla
+* Esto es perfectamente viable en entornos de laboratorio, pero puede no serlo en entornos de producción. Evaluar factibilidad antes de actualizar en esos casos
+
+# Instalación
+
+## Caldera
+A continuación, los pasos necesarios para realizar la instalación:
+
+`# sudo apt install caldera`
+
+Para corroborar la correcta instalación, ejecutar el comando caldera, con el parametro help. Debería obtenerse algo similar a lo que se expone a continuación:
+
+![Instalación Caldera](../../img/caldera1.png)
+
+Existen requerimientos adicionales si se desea usar SSL/TLS para securizar las comunicaciones, en particular, se requiere una instalación de haproxy:
+
+## Setup SSL/TLS
+
+`sudo apt install haproxy -y`
+
+Con el siguiente comando, generamos los componentes PKI necesarios
+Nota: A efectos del laboratorio, el certificado será autofirmado. Esto no es recomendable para un entorno productivo
+
+`cd /usr/share/caldera/plugins/ssl`
+
+`sudo openssl req -x509 -newkey rsa:4096 -out conf/certificate.pem -keyout conf/certificate.pem -nodes`
+
+OpenSSL pedirá una serie de datos. No son importantes para el entorno de laboratorio, incluso varios de ellos pueden ser dejados en blanco. El certificado quedará contenido en el directorio /usr/share/caldera/plugins/ssl/certificate.pem
+
+
+
+
+``
+``
+``
+``
+``
+``
+``
+``
