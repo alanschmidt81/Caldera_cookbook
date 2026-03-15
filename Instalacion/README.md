@@ -20,7 +20,7 @@ A continuación, los pasos necesarios para realizar la instalación:
 
 Para corroborar la correcta instalación, ejecutar el comando caldera, con el parametro help. Debería obtenerse algo similar a lo que se expone a continuación:
 
-![Instalación Caldera](../../img/caldera1.png)
+![Instalación Caldera](../img/caldera1.png)
 
 Existen requerimientos adicionales si se desea usar SSL/TLS para securizar las comunicaciones, en particular, se requiere una instalación de haproxy.
 NOTA: El plugin SSL usa HAProxy como proxy inverso: recibe trafico HTTPS en el puerto 8443 y lo redirige internamente al puerto 8888 de CALDERA.
@@ -41,11 +41,11 @@ Por último, copiar el template de configuración de haproxy al directorio conf
 
 Por último, deberá activarse el plugin SSL desde la interfaz de Caldera antes del primer inicio seguro. Para ésto, editaremos el archivo configuración, buscaremos el tag "plugins" y agregaremos el plugin "ssl". Al finalizar, la sección correspondiente del archivo deberá quedar de la siguiente manera:
 
-[Caldera - Plugins](../../img/caldera2.png)
+[Caldera - Plugins](../img/caldera2.png)
 
 Si todo anduvo según lo esperado, accediendo a http://192.168.1.54:8443, deberíamos obtener acceso a la pantalla de login de caldera
 
-[Caldera - Login](../../caldera3.png)
+[Caldera - Login](../img/caldera3.png)
 
 
 
