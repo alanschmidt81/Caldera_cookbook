@@ -14,9 +14,9 @@ Notas:
 # Instalación
 
 ## Caldera
-Instalaremos Caldera a partir de clonar el proyecto directamente desde GitHub. Debemos asegurarnos de que tenemos python3 y su módulo venv instalados. Adicionalmente se requiere go-language y npm
+Instalaremos Caldera a partir de clonar el proyecto directamente desde GitHub. Debemos asegurarnos de que tenemos python3 y su módulo venv instalados. Adicionalmente se requiere go-language y npm. En un entorno productivo, también es excluyente usarlo vía SSL, y para ésto también deberemos instalar haproxy.
 
-`sudo apt install -y python3-venv golang-go nodejs npm`
+`sudo apt install -y python3-venv golang-go nodejs npm haproxy`
 
 Para instalar, básicamente ubicaremos el root folder de caldera /srv. Crearemos un entorno virtual de python, lo activaremos e instalaremos los requerimientos via pip.
 
@@ -34,21 +34,7 @@ Para instalar, básicamente ubicaremos el root folder de caldera /srv. Crearemos
 
 `cp conf/default.yml conf/local.yml`
 
-Levantaremos el servicio por primera vez, ejecutando los siguientes comandos
-
-`python3 server.py --fresh --build`
-
-Debería apreciarse algo como lo siguiente:
-
-![Caldera Start](../img/caldera1.png)
-
-
-Existen requerimientos adicionales si se desea usar SSL/TLS para securizar las comunicaciones, en particular, se requiere una instalación de haproxy.
-NOTA: El plugin SSL usa HAProxy como proxy inverso: recibe trafico HTTPS en el puerto 8443 y lo redirige internamente al puerto 8888 de CALDERA.
-
 ## Setup SSL/TLS
-
-`sudo apt install haproxy -y`
 
 Con el siguiente comando, generamos los componentes PKI necesarios
 Nota: A efectos del laboratorio, el certificado será autofirmado. Esto no es recomendable para un entorno productivo
@@ -58,9 +44,22 @@ Nota: A efectos del laboratorio, el certificado será autofirmado. Esto no es re
 `sudo openssl req -x509 -newkey rsa:4096 -out conf/certificate.pem -keyout conf/certificate.pem -nodes`
 
 OpenSSL pedirá una serie de datos. No son importantes para el entorno de laboratorio, incluso varios de ellos pueden ser dejados en blanco. El certificado quedará contenido en el directorio /usr/share/caldera/plugins/ssl/certificate.pem.
-Por último, copiar el template de configuración de haproxy al directorio conf
 
-Por último, deberá activarse el plugin SSL desde la interfaz de Caldera antes del primer inicio seguro. Para ésto, editaremos el archivo configuración, buscaremos el tag "plugins" y agregaremos el plugin "ssl". Al finalizar, la sección correspondiente del archivo deberá quedar de la siguiente manera:
+Levantaremos el servicio por primera vez, ejecutando los siguientes comandos
+
+`python3 server.py --fresh --build`
+
+Debería apreciarse algo como lo siguiente:
+
+![Caldera Start](../img/caldera1.png)
+
+
+
+
+
+
+
+
 
 
 
