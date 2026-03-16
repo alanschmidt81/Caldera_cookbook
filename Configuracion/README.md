@@ -6,11 +6,11 @@ Al loguearnos a la interfaz web, deberíamos acceder directamente al dashboard y
 
 Por cuestiones de tiempo y practicidad, nos limitaremos a ejecutar un "Discovery & Collection". Es inofensivo pero muestra perfectamente cómo Caldera "piensa" y cómo el agente reporta en tiempo real. Para el lado agente (lo que corre del lado de la "víctima", desde el dashboard: Campaigns -> Agent -> Deploy an Agent. Deberíamos ver algo como lo siguiente:
 
-Foto: caldera6.png
+![Caldera Agents1](../img/caldera6.png)
 
 Seleccionaremos "Sendcat" y colocaremos la URL de nuestro server en el primer campo, y dejaremos los otros dos en default. Caldera generará código a ejecutar en el Windows (en el se arbitran los medios, entre otras cosas, para descargar el agente.
 
-foto: caldera7.png
+![Caldera Agents2](../img/caldera7.png)
 
 El código generado y adaptado a nuestro certificado autofirmado resulta:
 
