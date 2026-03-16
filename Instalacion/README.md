@@ -47,11 +47,15 @@ OpenSSL pedirá una serie de datos. No son importantes para el entorno de labora
 
 Por último, habilitaremos el módulo SSL en la configuración editando el archivo conf/local.yml, dejando la sección "plugins" según se ve en la siguiente imágen:
 
-![Caldera - SSLPlugin](../img/caldera)
+![Caldera - SSLPlugin](../img/caldera5.png)
 
 Levantaremos el servicio por primera vez, ejecutando los siguientes comandos
 
-`python3 server.py --fresh --build`
+`python3 server.py --fresh --build --environment local`
+
+Si todo salió bien, deberíamos ver algo como lo siguiente (nótese el https tachado y el port. Esto significa que está corriendo con SSL, pero con un certificado no confiable acorde a lo indicado al principio.
+
+![Caldera Dashboard SSL](../img/caldera4.png)
 
 
 
