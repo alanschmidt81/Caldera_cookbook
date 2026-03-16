@@ -1,5 +1,5 @@
 # Configuración
-
+En esta sección haremos una configuración básica y un test sencillo como para corroborar que todo quedó funcionando.
 Al loguearnos a la interfaz web, deberíamos acceder directamente al dashboard y obtener algo como lo siguiente
 
 ![Caldera Dashboard](../img/caldera4.png)
@@ -36,7 +36,7 @@ IMPORTANTE: Tanto Defender Firewall como Defender Threat Protection puede genera
 
 Al correr el script, obtendremos lo siguiente en la sección de agentes en interfaz de Caldera
 
-Foto: caldera9.png
+![Caldera Agents2](../img/caldera9.png)
 
 Vemos el agente reportado existosamente. El paso siguiente es crear una operación para comenzar con el simulacro. Por cuestiones de simplicidad y tiempo, iremos por un sencillo discovery.
 
@@ -53,6 +53,7 @@ Por último, presionar "Start".
 
 Puede apreciarse que ya se reconoce el host con sus datos, y hemos podido hacer una enumeración
 
-Foto: caldera11.png
-Foto: caldera10.png
+![Caldera Operation1](../img/caldera11.png)
+
+![Caldera Operation2](../img/caldera10.png)
 
