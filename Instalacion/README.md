@@ -45,15 +45,17 @@ Nota: A efectos del laboratorio, el certificado será autofirmado. Esto no es re
 
 OpenSSL pedirá una serie de datos. No son importantes para el entorno de laboratorio, incluso varios de ellos pueden ser dejados en blanco. El certificado quedará contenido en el directorio /usr/share/caldera/plugins/ssl/certificate.pem.
 
+Por último, habilitaremos el módulo SSL en la configuración editando el archivo conf/local.yml, dejando la sección "plugins" según se ve en la siguiente imágen:
+
+![Caldera - SSLPlugin](../img/caldera)
+
 Levantaremos el servicio por primera vez, ejecutando los siguientes comandos
 
 `python3 server.py --fresh --build`
 
-Debería apreciarse algo como lo siguiente:
 
-![Caldera Start](../img/caldera1.png)
 
-Entraremos por primera y única vez de modo inseguro, al solo efecto de habilitar el módulo ssl desde la interfaz. Apuntando el navegador a http://$IP:8888 (conteniendo la variable $IP, la ip de la máquina virtual donde se instaló caldera), deberíamos ver algo como:
+
 
 
 
