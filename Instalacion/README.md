@@ -40,7 +40,7 @@ Levantaremos el servicio por primera vez, ejecutando los siguientes comandos
 
 Debería apreciarse algo como lo siguiente:
 
-[Caldera Start](../img/caldera1.png)
+![Caldera Start](../img/caldera1.png)
 
 
 Existen requerimientos adicionales si se desea usar SSL/TLS para securizar las comunicaciones, en particular, se requiere una instalación de haproxy.
