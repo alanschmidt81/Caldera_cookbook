@@ -14,13 +14,19 @@ Notas:
 # Instalación
 
 ## Caldera
-A continuación, los pasos necesarios para realizar la instalación:
+Instalaremos Caldera a partir de clonar el proyecto directamente desde GitHub. Debemos asegurarnos de que tenemos python3 y su módulo venv instalados. Adicionalmente se requiere go-language
 
-`# sudo apt install caldera`
+`sudo apt install python3-venv -y && sudo apt install golang-go`
 
-Para corroborar la correcta instalación, ejecutar el comando caldera, con el parametro help. Debería obtenerse algo similar a lo que se expone a continuación:
+Para instalar, básicamente ubicaremos el root folder de caldera /srv. Crearemos un entorno virtual de python, lo activaremos e instalaremos los requerimientos via pip.
 
-![Instalación Caldera](../img/caldera1.png)
+`cd /srv`
+`git clone https://github.com/mitre/caldera.git --recursive`
+`cd caldera`
+`python3 -m venv venv`
+`source venv/bin/activate`
+`pip install -r requirements.txt`
+
 
 Existen requerimientos adicionales si se desea usar SSL/TLS para securizar las comunicaciones, en particular, se requiere una instalación de haproxy.
 NOTA: El plugin SSL usa HAProxy como proxy inverso: recibe trafico HTTPS en el puerto 8443 y lo redirige internamente al puerto 8888 de CALDERA.
