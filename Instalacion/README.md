@@ -55,41 +55,4 @@ Levantaremos el servicio por primera vez, ejecutando los siguientes comandos
 
 Si todo salió bien, deberíamos ver algo como lo siguiente (nótese el https tachado y el port. Esto significa que está corriendo con SSL, pero con un certificado no confiable acorde a lo indicado al principio.
 
-![Caldera Dashboard SSL](../img/caldera4.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Si todo anduvo según lo esperado, accediendo a http://192.168.1.54:8443, deberíamos obtener acceso a la pantalla de login de caldera
-
-![Caldera - Login](../img/caldera3.png)
-
-Se sugiere colocar contraseñas adecuadas en el mismo archivo de configuración, sección users. A efectos de este lab, simplemente usaremos los usuarios por defecto blue y red, con contraseña "password"
-
-![Caldera - Login2](../img/caldera4.png)
-
-
-
-
-
-``
-``
-``
-``
-``
-``
-``
-``
+![Caldera Login SSL](../img/caldera3.png)
