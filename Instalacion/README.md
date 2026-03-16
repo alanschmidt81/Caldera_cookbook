@@ -53,6 +53,10 @@ Debería apreciarse algo como lo siguiente:
 
 ![Caldera Start](../img/caldera1.png)
 
+Entraremos por primera y única vez de modo inseguro, al solo efecto de habilitar el módulo ssl desde la interfaz. Apuntando el navegador a http://$IP:8888 (conteniendo la variable $IP, la ip de la máquina virtual donde se instaló caldera), deberíamos ver algo como:
+
+
+
 
 
 
