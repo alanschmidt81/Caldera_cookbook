@@ -21,11 +21,17 @@ Instalaremos Caldera a partir de clonar el proyecto directamente desde GitHub. D
 Para instalar, básicamente ubicaremos el root folder de caldera /srv. Crearemos un entorno virtual de python, lo activaremos e instalaremos los requerimientos via pip.
 
 `cd /srv`
+
 `git clone https://github.com/mitre/caldera.git --recursive`
+
 `cd caldera`
+
 `python3 -m venv venv`
+
 `source venv/bin/activate`
+
 `pip install -r requirements.txt`
+
 `cp conf/default.yml conf/local.yml`
 
 Levantaremos el servicio por primera vez, ejecutando los siguientes comandos
